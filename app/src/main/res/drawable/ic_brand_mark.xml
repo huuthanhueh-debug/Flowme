@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Flowme: mark thương hiệu dùng trong app (ô bo góc gradient + nét logo). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="40dp" android:height="40dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:pathData="M32,0H76A32,32 0,0 1,108 32V76A32,32 0,0 1,76 108H32A32,32 0,0 1,0 76V32A32,32 0,0 1,32 0Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear"
+                android:startX="0" android:startY="0" android:endX="108" android:endY="108">
+                <item android:offset="0" android:color="#FF4338CA" />
+                <item android:offset="0.55" android:color="#FF6D4AFF" />
+                <item android:offset="1" android:color="#FF22D3EE" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <group android:pivotX="54" android:pivotY="54" android:scaleX="1.02" android:scaleY="1.02">
+        <group android:translateX="2.5" android:translateY="4">
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#FFFFFFFF"
+                android:strokeWidth="8.5"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:pathData="M21,56 C26.5,56 28.5,44 34.5,44 C40.5,44 42,60 48,60 C52.5,60 54,52 58.5,52 C62,52 63,62 70,62 A12,12 0 1,0 58,50" />
+        </group>
+    </group>
+</vector>

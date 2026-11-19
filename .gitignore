@@ -1,0 +1,24 @@
+build/
+app/build/
+.gradle/
+.kotlin/
+local.properties
+*.log
+
+# Khoá ký APK – KHÔNG BAO GIỜ đưa lên git (mất/lộ khoá = không cài đè được bản cập nhật)
+keystore/
+*.jks
+*.keystore
+keystore.properties
+
+# APK đã build – phát hành qua GitHub Releases
+dist/
+*.apk
+*.aab
+
+# IDE / công cụ
+.idea/
+*.iml
+.ruff_cache/
+captures/
+.DS_Store

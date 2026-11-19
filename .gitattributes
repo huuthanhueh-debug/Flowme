@@ -1,0 +1,8 @@
+# Giữ đúng kiểu xuống dòng khi clone trên Windows (core.autocrlf=true sẽ làm hỏng script bash)
+* text=auto
+*.sh text eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.jks binary
+*.png binary
+*.apk binary

@@ -1,0 +1,80 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Flowme logo</title>
+<style>
+  body{margin:0;padding:24px;background:#eef0f5;font:14px system-ui,sans-serif;color:#222}
+  .row{display:flex;gap:28px;align-items:flex-end;margin-bottom:26px}
+  .cell{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .dark{background:#16171d;padding:16px;border-radius:12px;color:#ddd}
+  svg{display:block}
+  h3{margin:0 0 10px}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/>
+      <stop offset="0.55" stop-color="#6D4AFF"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <clipPath id="circle"><circle cx="54" cy="54" r="40"/></clipPath>
+    <clipPath id="squircle"><rect x="14" y="14" width="80" height="80" rx="24"/></clipPath>
+
+    <!-- A: chữ f với thanh ngang là sóng âm -->
+    <g id="A" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M50,80 L50,47 C50,36 56.5,29.5 66,29.5 C68.6,29.5 70.8,30 72.6,30.8" stroke-width="9"/>
+      <path d="M33,55 C37.5,49.5 42,49.5 46.5,55 S55.5,60.5 60,55 S69,49.5 73.5,55" stroke-width="7"/>
+    </g>
+    <!-- B: sóng âm dạng cột, đỉnh theo đường cong "flow" -->
+    <g id="B" fill="#fff">
+      <rect x="27" y="47" width="7" height="14" rx="3.5"/>
+      <rect x="39" y="38" width="7" height="32" rx="3.5"/>
+      <rect x="51" y="30" width="7" height="48" rx="3.5"/>
+      <rect x="63" y="40" width="7" height="28" rx="3.5"/>
+      <rect x="75" y="46" width="7" height="16" rx="3.5"/>
+    </g>
+    <!-- C: dấu chấm "me" + 2 sóng lan ra "flow" -->
+    <g id="C" fill="none" stroke="#fff" stroke-linecap="round">
+      <circle cx="40" cy="54" r="8" fill="#fff" stroke="none"/>
+      <path d="M55,38 C62,48 62,60 55,70" stroke-width="7"/>
+      <path d="M67,29 C79,44 79,64 67,79" stroke-width="7" stroke-opacity="0.85"/>
+    </g>
+    <!-- D: một nét liền: sóng chảy vào vòng tròn (flow → me) -->
+    <g id="D" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M25,60 C31,60 33,48 39,48 C45,48 46,64 52,64 C56,64 58,58 60,54" stroke-width="7"/>
+      <circle cx="70" cy="49" r="11" stroke-width="7"/>
+    </g>
+
+    <!-- D2: sóng -> lăn thành vòng tròn (một nét liền, tiếp tuyến ở đáy vòng) -->
+    <g id="D2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,4)">
+      <path d="M22,57 C28,57 30.5,45 37,45 C43.5,45 45.5,61.5 53,61.5 L70.5,61.5 A11.5,11.5 0 1,0 59,50" stroke-width="7.5"/>
+    </g>
+    <!-- D3: sóng nhỏ dần rồi cuộn thành vòng -->
+    <g id="D3" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" transform="translate(1,3)">
+      <path d="M21,56 C26.5,56 28.5,44 34.5,44 C40.5,44 42,60 48,60 C52.5,60 54,52 58.5,52 C62,52 63,62 70,62 A12,12 0 1,0 58,50" stroke-width="7.5"/>
+    </g>
+    <!-- D4: D gốc, căn giữa + nét dày hơn -->
+    <g id="D4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" transform="translate(1,4)">
+      <path d="M23,58 C29,58 31,46 37.5,46 C44,46 45,62 51.5,62 C55.5,62 57.5,57 59.5,53" stroke-width="8"/>
+      <circle cx="70" cy="48" r="11.5" stroke-width="8"/>
+    </g>
+  </defs>
+</svg>
+
+<script>
+const ids = ["D","D2","D3","D4"];
+function icon(id, clip, size){
+  return `<svg width="${size}" height="${size}" viewBox="14 14 80 80">
+    <g clip-path="url(#${clip})"><rect width="108" height="108" fill="url(#bg)"/><use href="#${id}"/></g></svg>`;
+}
+let html = "";
+for (const id of ids){
+  html += `<h3>Phương án ${id}</h3><div class="row">
+   <div class="cell">${icon(id,"squircle",180)}<span>squircle 180</span></div>
+   <div class="cell">${icon(id,"circle",120)}<span>tròn 120</span></div>
+   <div class="cell">${icon(id,"squircle",48)}<span>48</span></div>
+   <div class="cell dark">${icon(id,"circle",56)}<span>nền tối</span></div>
+  </div>`;
+}
+document.body.insertAdjacentHTML("beforeend", html);
+</script>
+</body></html>

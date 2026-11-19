@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Flowme</string>
+    <string name="tile_label">Flowme</string>
+    <string name="widget_label">Flowme – Bật/Tắt</string>
+    <string name="widget_desc">Một chạm để bật hoặc tắt ghi nhớ cả ngày</string>
+    <string name="widget_off">Bật Flowme</string>
+
+    <color name="bg">#FFF6F7FB</color>
+    <color name="brand">#FF5B47F5</color>
+
+    <style name="Theme.NgheNho" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.NgheNho.Transparent" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+</resources>

@@ -1,0 +1,15 @@
+<!-- Flowme – logo gốc (108×108, theo lưới adaptive icon của Android). Nét: sóng âm nhỏ dần rồi cuộn thành vòng ("flow" → "me"). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 108 108">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/>
+      <stop offset="0.55" stop-color="#6D4AFF"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="108" height="108" rx="32" fill="url(#g)"/>
+  <g transform="translate(54 54) scale(1.02) translate(-54 -54) translate(2.5 4)">
+    <path d="M21,56 C26.5,56 28.5,44 34.5,44 C40.5,44 42,60 48,60 C52.5,60 54,52 58.5,52 C62,52 63,62 70,62 A12,12 0 1,0 58,50"
+          fill="none" stroke="#fff" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
